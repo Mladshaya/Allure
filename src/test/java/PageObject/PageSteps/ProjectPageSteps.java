@@ -3,9 +3,9 @@ package PageObject.PageSteps;
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+
 import static PageObject.PageElements.ProjectPageElements.*;
 import static com.codeborne.selenide.Condition.*;
-
 
 
 public class ProjectPageSteps {
@@ -19,6 +19,7 @@ public class ProjectPageSteps {
         linkProject.shouldHave(Condition.exactText(projectName)).click();
     }
 
+
     @Then("Проверяем количество задач в проекте")
     public static void findTasksAmount() {
         tasksList.shouldBe(Condition.enabled).click();
@@ -27,6 +28,7 @@ public class ProjectPageSteps {
         System.out.println(amount);
     }
 
+
     @Then("Находим и открываем задачу {string}")
     public static void searchTask(String task) {
         taskFilter.shouldBe(Condition.enabled).click();
@@ -34,6 +36,7 @@ public class ProjectPageSteps {
         searchField.shouldBe(Condition.empty).setValue(task);
         searchField.pressEnter();
     }
+
 
     @Then("Проверяем затронутую версию")
     public static void checkVersion() {
@@ -44,6 +47,7 @@ public class ProjectPageSteps {
 
 
     }
+
 
     @Then("Проверяем статус задачи")
     public static void checkStatus() {

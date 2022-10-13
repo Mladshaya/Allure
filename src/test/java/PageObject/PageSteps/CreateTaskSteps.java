@@ -3,7 +3,9 @@ package PageObject.PageSteps;
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.en.Then;
 
+
 import java.time.Duration;
+
 import static PageObject.PageElements.CreateTaskElements.*;
 import static com.codeborne.selenide.Condition.visible;
 
@@ -26,6 +28,8 @@ public class CreateTaskSteps {
         buttonCreateTask.click();
         linkTask.shouldBe(visible).click();
     }
+
+
     @Then("Проводим баг по статусам")
     public static void changeStatus() {
         buttonInwork.click();

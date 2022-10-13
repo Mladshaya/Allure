@@ -15,6 +15,7 @@ public class AuthorizationPageSteps {
         open(url);
     }
 
+
     @And("Вводим логин {string} и пароль {string}")
     public static void authorization(String login, String password) {
         loginLane.shouldBe(visible).sendKeys(login);
